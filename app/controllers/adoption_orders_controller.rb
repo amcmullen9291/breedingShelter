@@ -1,0 +1,2 @@
+class AdoptionOrdersController < ApplicationController
+end

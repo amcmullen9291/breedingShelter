@@ -1,0 +1,2 @@
+module AdoptionOrdersHelper
+end

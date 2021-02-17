@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :breeds
+  resources :adoption_orders
   namespace :admin do 
     resources :staffs
   end 
