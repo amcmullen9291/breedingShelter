@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+div.ccm-page header #header-site-title {font-family: 'Titillium Web';
+ font-weight: 400;
+ color: #75ca2a;
+ text-transform: none;
+ line-height: 1.15em;
+ font-size: 2.3em;
+ -webkit-transition: color .2s linear;
+ -o-transition: color .2s linear;
+ transition: color .2s linear
+}
