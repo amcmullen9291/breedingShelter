@@ -4,6 +4,7 @@ class AdoptionOrder < ApplicationRecord
     has_many :persons 
 
     validates_presence_of :breed
-    validates :email, uniqueness: true
     validates_presence_of :name, length: { minimum: 8 } 
+    validates_presence_of :staff_id
+ 
 end

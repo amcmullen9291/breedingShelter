@@ -10,13 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_114851) do
+ActiveRecord::Schema.define(version: 2021_02_17_150218) do
+
+  create_table "adoption_orders", force: :cascade do |t|
+    t.integer "staff_id"
+    t.integer "person_id"
+    t.integer "breed_id"
+    t.time "appointment_time"
+    t.text "notes"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "pet_name"
+  end
+
+  create_table "breeds", force: :cascade do |t|
+    t.string "pet_name"
+    t.string "breed"
+    t.string "hair"
+    t.string "temperment"
+    t.integer "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer "person_id"
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "people", force: :cascade do |t|
+    t.string "full_name"
+    t.text "email_address"
+    t.string "telephone"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "staffs", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "telephone"
   end
 
 end
