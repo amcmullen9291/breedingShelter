@@ -5,7 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first
-
+@breed = Breed.create!(pet_name: "Lady Sophia", breed: "Parson Russell Terrier", hair: "longer", temperment: "bold and clever" , age: "")
+@breed = Breed.create!(pet_name: "Chester", breed: "Papillon", hair: "short", temperment: "the quick and curious" , age)
+@breed = Breed.create!(pet_name: "Bugsy", breed: "Pekingese", hair: "long", temperment: "a compact toy companion of regal bearing and a distinctive rolling gait" , age)
+@breed = Breed.create!(pet_name: "Ralphie", breed: "Pembroke Welsh Corgi", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+@breed = Breed.create!(pet_name: "Prince Tartar", breed: "Pomeranian", hair: "fluffy", temperment: "one of the world's most popular toy breeds." , age)
+@breed = Breed.create!(pet_name: "Lady Cashmere", breed: "Poodle (Miniature)", hair: "longer", temperment: "bold and clever" , age)
+@breed = Breed.create!(pet_name: "Sir Eleanor Bigsby", breed: "Poodle (Toy)", hair: "short", temperment: "the quick and curious" , age)
+@breed = Breed.create!(pet_name: " Bugsy Esquire", breed: "Portuguese Podengo Pequeno", hair: "long", temperment: "a compact toy companion of regal bearing and a distinctive rolling gait" , age)
+@breed = Breed.create!(pet_name: "Sir Wrinkles Raleigh", breed: "Pug", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+@breed = Breed.create!(pet_name: "Prince Tartar", breed: "Pumi", hair: "fluffy", temperment: "one of the world's most popular toy breeds." , age)
+@breed = Breed.create!(pet_name: "Jason Bateman", breed: "Pug", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+@breed = Breed.create!(pet_name: "Archie Bunker", breed: "Pug", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+@breed = Breed.create!(pet_name: "Lady Belvedere", breed: "Pekingese", hair: "long", temperment: "a compact toy companion of regal bearing and a distinctive rolling gait" , age)
+@breed = Breed.create!(pet_name: "Martini and Rossi", breed: "Pekingese", hair: "long", temperment: "a compact toy companion of regal bearing and a distinctive rolling gait" , age)
+@breed = Breed.create!(pet_name: "Gucci Bombay", breed: "Pembroke Welsh Corgi", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+@breed = Breed.create!(pet_name: "Millo Jovovich", breed: "Pembroke Welsh Corgi", hair: "short", temperment: "Among the most agreeable of all small housedogs." , age)
+ 
 
 # Staff:
 @staff= Staff.create!(first_name: "Rebecca" , last_name: "Bourgeois" )
