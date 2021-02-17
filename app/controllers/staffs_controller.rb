@@ -27,7 +27,7 @@ class StaffsController < ApplicationController
         @staff = Staff.find_by(:id)
     end
 
-    def staff_attributes 
-    end 
-
+    def staff_params
+        params.require(:staff).permit(:first_name, :last_name)
+      end
 end

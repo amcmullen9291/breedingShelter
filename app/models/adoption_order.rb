@@ -6,5 +6,6 @@ class AdoptionOrder < ApplicationRecord
     validates_presence_of :breed
     validates_presence_of :name, length: { minimum: 8 } 
     validates_presence_of :staff_id
- 
+    validates_presence_of :pet_name
+
 end
