@@ -2,8 +2,7 @@
 
 <%= form_with @breed do |f| %>
   Pet Picture: <%= f.file_field :pet_pic %> <br>
-  <%= f.text_field :title %><br />
-  Pet Name: <%= f.label "Pet's name" %><br />
+  Pet Name: <%= f.text_field :pet_name %><br />
   # <%= f.text_field :breed %><br />
   select_tag "breed", options_from_collection_for_select(@breeds, "id", "breed"), prompt: "Select breed", include_blank: true
   <%= form.label "age" %>
@@ -13,5 +12,5 @@
   <%= f.label "temperment" %>
   <%= f.text_field :temperment %>
   
-  <%= form.submit %>
+  <%= f.submit %>
     <% end %>

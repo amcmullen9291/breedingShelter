@@ -5,7 +5,7 @@ class CreateAdoptionOrders < ActiveRecord::Migration[6.1]
       t.integer :person_id
       t.integer :breed_id
       t.time  :appointment_time 
-      t.text :notes 
+      t.text :notes, default: "none" 
       t.timestamps
     end
   end
