@@ -6,6 +6,7 @@ class BreedsController < ApplicationController:
     end 
 
     def new 
+        @breed = Breed.new 
     end 
 
     def create
@@ -23,7 +24,7 @@ class BreedsController < ApplicationController:
         if @breed.update(breed_params)
 
         else
-            render :new
+            render :edit
         end
     end
 

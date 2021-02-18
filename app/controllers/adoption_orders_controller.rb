@@ -1,7 +1,13 @@
 class AdoptionOrdersController < ApplicationController
 before_action: :set_adopt_order, only: [:show, :edit, :patch, :destroy]
 
+
+    def index 
+        @orders = AdoptionOrder.all 
+    end 
+
     def new 
+        @adoption_order = AdoptionOrder.new
     end 
 
     def create 
