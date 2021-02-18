@@ -1,5 +1,5 @@
 class BreedsController < ApplicationController: 
-    before_action: :set_breed, only: [:edit, :patch, :destroy, :show]
+    before_action :set_breed, only: [:edit, :patch, :destroy, :show]
     
     def index 
         @breeds = Breed.all

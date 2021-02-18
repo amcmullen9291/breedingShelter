@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    before_action: :identify_cust, only: [:create, :show] 
+    before_action :identify_cust, only: [:create, :show] 
 
 
     private

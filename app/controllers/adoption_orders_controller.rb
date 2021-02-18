@@ -1,5 +1,5 @@
 class AdoptionOrdersController < ApplicationController
-before_action: :set_adopt_order, only: [:show, :edit, :patch, :destroy]
+before_action :set_adopt_order, only: [:show, :edit, :patch, :destroy]
 
 
     def index 
@@ -38,6 +38,11 @@ before_action: :set_adopt_order, only: [:show, :edit, :patch, :destroy]
     end 
 
     private 
+
+    def set_adopt_order
+        @adoption_order =AdoptionOrder.find_by(:id)
+    end
+
     def adoption_params    
         params.require(:breed).permit.(:pet_name, :breed, :hair, :temperment, :age, :male?)
     end 
