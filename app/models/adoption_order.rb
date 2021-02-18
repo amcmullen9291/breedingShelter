@@ -1,11 +1,10 @@
 class AdoptionOrder < ApplicationRecord
     belongs_to :staff
-    has_many :breeds 
-    has_many :persons 
+    has_many :breed 
+    has_many :person 
 
-    validates_presence_of :breed
-    validates_presence_of :name, length: { minimum: 8 } 
+    validates_presence_of :breed_id
     validates_presence_of :staff_id
-    validates_presence_of :pet_name
+    validates_presence_of :person_id
 
 end
