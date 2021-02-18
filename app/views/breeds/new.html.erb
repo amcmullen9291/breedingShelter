@@ -1,5 +1,17 @@
-#might be able to use the selct dropdown
+# might be able to use the selct dropdown
 
-<%= form_with model: @breed, do |f| %>
-    render 'form'
-  <% end %>
+<%= form_with @breed do |f| %>
+  Pet Picture: <%= f.file_field :pet_pic %> <br>
+  <%= f.text_field :title %><br />
+  Pet Name: <%= f.label "Pet's name" %><br />
+  # <%= f.text_field :breed %><br />
+  select_tag "breed", options_from_collection_for_select(@breeds, "id", "breed"), prompt: "Select breed", include_blank: true
+  <%= form.label "age" %>
+  <%= form.text_field :age %>
+  <%= f.label "hair" %>
+  <%= f.text_field :hair %>
+  <%= f.label "temperment" %>
+  <%= f.text_field :temperment %>
+  
+  <%= form.submit %>
+    <% end %>

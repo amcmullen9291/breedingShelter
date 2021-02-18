@@ -1,13 +1,19 @@
 <p> current residents</p>
 <table>
+<thead> Current Residents</thead>
+<body>
 <%=@breeds.each do |breed|%>
     <tr>
-    <td><%="#{breed.breed}"%></td>
-    <td><%="#{breed.age}"%></td>
-    <td><%="#{breed.male?}"%></td>
-    <td> #picture for scruffy</td>
+    <td><%= breed.breed %></td>
+    <td><%= breed.age %></td>
+    <td><%= breed.male? %></td>
+    <td><%= if breed.pet_pic.attached? %>
+        <image src ="<%(url_for(@breed.pet_pic))%>">
+        <%end%>
+    </td>
     <td>Meet <%=link_to @breed.pet_name, breed_path(breed)%></td>
 </tr>
+</body>
 </table>
 
 

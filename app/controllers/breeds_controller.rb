@@ -11,7 +11,7 @@ class BreedsController < ApplicationController
 
     def create
         if @breed.create(breed_params)
-
+            @breed.pet_pic.attach(params[:pet_pic])
         else
             render :new
         end
@@ -22,7 +22,7 @@ class BreedsController < ApplicationController
 
     def patch 
         if @breed.update(breed_params)
-
+            redirect_to @breeds
         else
             render :edit
         end
@@ -41,7 +41,7 @@ class BreedsController < ApplicationController
     end
 
     def breed_params    
-        params.require(:breed).permit.(:pet_name, :breed, :hair, :temperment, :age, :male?)
+        params.require(:breed).permit.(:pet_name, :breed, :hair, :temperment, :age, :male?, :pet_pic)
     end 
 
 end
