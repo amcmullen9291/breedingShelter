@@ -1,1 +1,13 @@
-# you want a grid? 
+<p> current residents</p>
+<table>
+<%=@breeds.each do |breed|%>
+    <tr>
+    <td><%="#{breed.breed}"%></td>
+    <td><%="#{breed.age}"%></td>
+    <td><%="#{breed.male?}"%></td>
+    <td> #picture for scruffy</td>
+    <td>Meet <%=link_to @breed.pet_name, breed_path(breed)%></td>
+</tr>
+</table>
+
+

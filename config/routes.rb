@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     end
   end
   resources :breeds do 
-    resource :search, only: [:new, :show]
+    resource :search, only: [:new, :show, :saved]
   end 
   resources :adoption_orders, only: [:new, :create]
   namespace :admin do 

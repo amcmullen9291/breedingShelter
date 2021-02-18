@@ -1,0 +1,17 @@
+#might be ablt to use the select dropdown menu
+
+<%= f.label "profile picture" %>
+<%= f.file_field :pet_pic %> <br>
+<%= f.text_field :title %>
+# <%= f.label "breed" %>
+# <%= f.text_field :breed %>
+<%= f.select_tag "breeds", options_from_collection_for_select(Breeds.all, "id", "breed")
+<%= f.include_blank: true %>
+<%= form.label "age" %>
+<%= form.text_field :age %>
+<%= f.label "hair" %>
+<%= f.text_field :hair %>
+<%= form.label "temperment" %>
+<%= form.text_field :temperment %>
+
+<%= form.submit %>

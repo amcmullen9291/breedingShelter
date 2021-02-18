@@ -1,4 +1,4 @@
-class BreedsController < ApplicationController: 
+class BreedsController < ApplicationController 
     before_action :set_breed, only: [:edit, :patch, :destroy, :show]
     
     def index 
@@ -30,7 +30,7 @@ class BreedsController < ApplicationController:
 
     def delete 
         @breed.destroy 
-        render : #set the root page
+        #render :set the root page
     end 
 
 

@@ -1,4 +1,5 @@
-# <%=form_for @breed, method :get%>
+#might be able to use the selct dropdown
 
-<%= f.label "profile picture" %>
-<%= f.file_field :pet_pic %> <br>
+<%= form_with model: @breed, do |f| %>
+    render 'form'
+  <% end %>
